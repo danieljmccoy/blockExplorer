@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 10%,rgba(28,147,46,1) 20%,rgba(0,0,0,1) 30%,rgba(0,0,0,1) 40%,rgba(28,147,46,1) 50%,rgba(0,0,0,1) 60%,rgba(0,0,0,1) 70%,rgba(28,147,46,1) 80%,rgba(0,0,0,1) 90%,rgba(0,0,0,1) 100%);
+  background-size: 500% 100%;
+  
+  /*big part how the bg magic happens, creating the clip bg with transparent fill*/
+  -webkit-background-clip: text;
+  animation: background 20s linear infinite;
+  color: #eee;
+  text-shadow: 4px 4px #000;
+}
+
+@keyframes background {
+  0%{background-position:0% 50%}
+  100%{background-position:100% 50%}
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.blocksBack, .blockRange {
+   background: #95a949;
+}
+
+.buttons {
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+  border-radius: 5px 5px 0 0;
+}
+
+.loadClass {
+ border-color: rgba(229, 103, 23, 0.8);
+  box-shadow: 5px 2px 2px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 203, 23, 0.6);
+  outline: 0 none;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  resize: both;
+  overflow: auto;
+  border-radius: 5px;
+  background: -webkit-linear-gradient(left, transparent, #1F1);
+  padding: 10px;
+  margin: 0px 0px 0px 25%;
+  width: 50%;
+}
+
+label {
+  text-shadow: 1.5px 1.5px #000;
+  padding: 0px 5px;
+  margin: 0px 0px 0px 0px;
+  display: inline-block;
+}
+
+input[type=text]{
+  width: 150%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #ecf0f1;
+  margin: 0px -50px 0px -40%;
+}
+
+input[type=submit] {
+  background: #4CFF50;
+  color: white;
+  padding: 10px 15px;
+  border-color: black;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 6% 15%;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+  box-shadow: 0px 0px 10px #111;
+  transform: scale(1.1);
+  border: none;
+}
+
+textarea:focus, input:focus, input[type]:focus, .buttons:focus {   
+  border-color: rgba(229, 103, 23, 0.8);
+  box-shadow: 5px 2px 2px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 203, 23, 0.6);
+  outline: 0 none;
+}
+
+.cols {
+  width: 160%;
+  margin: 10px auto;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .cols, input[type=submit] {
+    width: 100%;
+    margin: 6% 25%;
+  }
+  input[type=submit] {
+  margin: 6% 5%;
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="explorer.css">
+  <title>Block Explorer</title>
+</head>
+  <body>
+      <!-- this is a very slimmed down block explorer for an interview with the truffle team at consensys -->
+
+    <h1 class="header-wrap">Ethereum Block Explorer Lite</h1>
+    
+    <div class="button-container">
+      <button class="blocksBack buttons">How many blocks back to search</button>
+    
+      <button class="blockRange buttons">Range of blocks to search</button>
+    </div>
+  <div class="form-container">
+    <!--php placeholder, will be served via node.js-->
+    <form action="/action_page.php">
+      <label for="range1" class=range1Label>Blocks to Search</label>
+      <div class="cols">
+        <input type="text" id="range1" name="range1" placeholder="Enter how many blocks back to search" required>
+      </div>
+      <label for="range2" class=range2Label></label>
+      <div class="cols">
+        <input type="text" id="range2" name="range2">
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+    <script type="text/javascript" src="explorer.js"></script>
+  </body>
+</html>
